@@ -1,0 +1,12 @@
+= Confluent Fundamentals of Apache Kafka(R)
+
+This repository contains the sample code discussed and used in the Confluent course *Confluent Fundamentals of Apache Kafka(R)*.
+
+Use the following command to clone this repo to your workstation:
+
+[source,subs="verbatim,quotes"]
+--
+$ *git clone \
+    https://github.com/confluentinc/training-fundamentals-src.git \
+    ~/confluent-fundamentals*
+--
