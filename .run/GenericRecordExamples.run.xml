@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="GenericRecordExamples" type="Application" factoryName="Application" nameIsGenerated="true">
     <option name="MAIN_CLASS_NAME" value="com.github.simplesteph.avro.generic.GenericRecordExamples" />
-    <module name="avro-examples" />
+    <module name="kafka-avro-examples" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/udemy-schema-course/kafka-avro-course-master/avro-examples" />
     <extension name="coverage">
       <pattern>

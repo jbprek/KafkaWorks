@@ -13,11 +13,11 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>streams-starter-project</module>
+        <module>streams-word-count</module>
         <module>streams-bank-balance-exactly-once</module>
         <module>streams-favourite-colour-java</module>
-        <module>streams-starter-project</module>
         <module>streams-user-event-enricher</module>
-        <module>streams-word-count</module>
     </modules>
 
 </project>
