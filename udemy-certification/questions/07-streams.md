@@ -8,10 +8,6 @@ Which of the following event processing application is stateless? (select two)
 4. Publish the top 10 stocks each day.
 
 
-
-Explanation
-Stateless means processing of each message depends only on the message, so converting from JSON to Avro or filtering a stream are both stateless operations
-
 ## Question 2 (1-15)
 You are running a Kafka Streams application in a Docker container managed by Kubernetes, and upon application restart, it takes a long time for the docker container to replicate the state and get back to processing the data. How can you improve dramatically the application restart?
 
