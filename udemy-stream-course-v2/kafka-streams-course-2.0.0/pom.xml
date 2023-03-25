@@ -6,7 +6,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.simplesteph.udemy.kafka.streams</groupId>
-    <artifactId>kafka-streams-course-parent-project</artifactId>
+    <artifactId>streams-course-parent-project</artifactId>
+    <name>streams-course-parent-project</name>
     <version>0.11</version>
 
 
