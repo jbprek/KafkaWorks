@@ -5,13 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.simplesteph.udemy.kafka.streams</groupId>
-    <artifactId>bank-balance-exactly-once</artifactId>
+    <artifactId>streams-user-event-enricher</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>streams-user-event-enricher</name>
 
 
     <dependencies>
-
-        <!--project dependencies -->
         <!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka-streams -->
         <dependency>
             <groupId>org.apache.kafka</groupId>
@@ -19,16 +18,6 @@
             <version>2.0.1</version>
         </dependency>
 
-        <!--to write the kafka producer-->
-        <!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients -->
-        <dependency>
-            <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka-clients</artifactId>
-            <version>2.0.1</version>
-        </dependency>
-
-
-        <!--for logging purposes-->
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -51,7 +40,6 @@
             <scope>test</scope>
         </dependency>
 
-
     </dependencies>
 
     <build>
@@ -67,6 +55,7 @@
                 </configuration>
             </plugin>
 
+
             <!--package as one fat jar-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -79,7 +68,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.github.simplesteph.udemy.kafka.streams.BankBalanceExactlyOnce</mainClass>
+                            <mainClass>com.github.simplesteph.udemy.kafka.streams.UserEventEnricherApp</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
