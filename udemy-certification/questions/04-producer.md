@@ -47,7 +47,7 @@ Select all that applies (select THREE)
 2. min.insync.replicas is a producer setting
 3. min.insync.replicas only matters if acks=all
 4. min.insync.replicas only matters regardless of the value of acks
-5. min.insync.replicasl is a topic setting
+5. min.insync.replicas is a topic setting
 6. acks is a topic settting
 
 ## Question 7: 
@@ -107,9 +107,6 @@ The rule "same key goes to the same partition" is true unless...
 3. the replication factor changes
 4. the number of kafka brokers change
 
-Explanation
-
-Increasing the number of partition causes new messages keys to get hashed differently, and breaks the guarantee "same keys goes to the same partition". Kafka logs are immutable and the previous messages are not re-shuffled.
 
 ## Question 14: 
 When is the onCompletion() method called?
@@ -237,9 +234,7 @@ A kafka topic has a replication factor of 3 and min.insync.replicas setting of 2
 3. 3
 4. 2
 
-Explanation
 
-min.insync.replicas does not impact producers when acks=1 (only when acks=all)
 
 ## Question 25: 
 You want to send a message of size 3 MB to a topic with default message size configuration. How does KafkaProducer handle large messages?
@@ -281,8 +276,6 @@ A customer has many consumer applications that process messages from a Kafka top
 Explanation
 
 each consumer can process only 50 MB/s, so we need at least 20 consumers consuming one partition so that 50 * 20 = 1000 MB target is achieved.
-
-
 
 
 ## Question 4: 
