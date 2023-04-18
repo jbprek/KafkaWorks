@@ -138,9 +138,6 @@ A producer is sending messages with null key to a topic with 6 partitions using 
 3. Any of the topic partitions
 4. partition 0
 
-Explanation
-
-Message with no keys will be stored with round-robin strategy among partitions.
 
 ## Question 16: 
 What is returned by a producer.send() call in the Java API?
@@ -150,9 +147,6 @@ What is returned by a producer.send() call in the Java API?
 3. Unit
 4. Future<ProducerRecord> object
 
-Explanation
-
-See: https://kafka.apache.org/21/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html
 
 ## Question 17: 
 A kafka topic has a replication factor of 3 and min.insync.replicas setting of 2. How many brokers can go down before a producer with acks=all can't produce?
@@ -161,10 +155,6 @@ A kafka topic has a replication factor of 3 and min.insync.replicas setting of 2
 2. 3
 3. 0
 4. 1
-
-Explanation
-
-acks=all and min.insync.replicas=2 means we must have at least 2 brokers up for the partition to be available
 
 ## Question 18: 
 What happens if you write the following code in your producer? 
@@ -186,6 +176,7 @@ A topic has three replicas and you set min.insync.replicas to 2. If two out of t
 
 ## Question 20:
 You are receiving orders from different customer in an "orders" topic with multiple partitions. Each message has the customer name as the key. There is a special customer named ABC that generates a lot of orders and you would like to reserve a partition exclusively for ABC. The rest of the message should be distributed among other partitions. How can this be achieved? 
+
 1. Not possible since messages with the same key will go to the same partition, but a partition may contain messages with different keys.
 2. Add metadata to the producer record
 3. define a Kafka Broker routing table

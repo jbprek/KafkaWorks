@@ -27,13 +27,13 @@ public class ConsumerDemoCooperative {
         Properties properties = new Properties();
 
         // connect to Localhost
-//        properties.setProperty("bootstrap.servers", "127.0.0.1:9092");
+        properties.setProperty("bootstrap.servers", "127.0.0.1:9092");
 
         // connect to Conduktor Playground
-        properties.setProperty("bootstrap.servers", "cluster.playground.cdkt.io:9092");
-        properties.setProperty("security.protocol", "SASL_SSL");
-        properties.setProperty("sasl.jaas.config", "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"your-username\" password=\"your-password\";");
-        properties.setProperty("sasl.mechanism", "PLAIN");
+//        properties.setProperty("bootstrap.servers", "cluster.playground.cdkt.io:9092");
+//        properties.setProperty("security.protocol", "SASL_SSL");
+//        properties.setProperty("sasl.jaas.config", "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"your-username\" password=\"your-password\";");
+//        properties.setProperty("sasl.mechanism", "PLAIN");
 
         // create consumer configs
         properties.setProperty("key.deserializer", StringDeserializer.class.getName());
@@ -51,19 +51,17 @@ public class ConsumerDemoCooperative {
         final Thread mainThread = Thread.currentThread();
 
         // adding the shutdown hook
-        Runtime.getRuntime().addShutdownHook(new Thread() {
-            public void run() {
-                log.info("Detected a shutdown, let's exit by calling consumer.wakeup()...");
-                consumer.wakeup();
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            log.info("Detected a shutdown, let's exit by calling consumer.wakeup()...");
+            consumer.wakeup();
 
-                // join the main thread to allow the execution of the code in the main thread
-                try {
-                    mainThread.join();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+            /* join the main thread to allow the execution of the code in the main thread */
+            try {
+                mainThread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-        });
+        }));
 
 
 

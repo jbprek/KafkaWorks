@@ -41,7 +41,6 @@ The exactly once guarantee in the Kafka Streams is for which flow of data?
 1. Kafka=>External
 2. Kafka=>Kafka
 3. External=>Kafka
-e exactly once processing if you have a Kafka to Kafka topology.
 
 ## Question 6 (2-5)
 We have a store selling shoes. What dataset is a great candidate to be modeled as a KTable in Kafka Streams?
@@ -51,9 +50,6 @@ We have a store selling shoes. What dataset is a great candidate to be modeled a
 3. Money mad until now
 4. The transaction stream
 
-Explanation
-
-Aggregations of stream are stored in table, whereas Streams must be modeled as a KStream to avoid data explosion
 
 ## Question 7 (2-9)
 An ecommerce website maintains two topics - a high volume "purchase" topic with 5 partitions and low volume "customer" topic with 3 partitions. You would like to do a stream-table join of these topics. How should you proceed?
@@ -63,9 +59,6 @@ An ecommerce website maintains two topics - a high volume "purchase" topic with 
 3. Do a KStream/Ktable join after a repartition step
 4. Model customer as a GlobalKTable
 
-Explanation
-
-In case of KStream-KStream join, both need to be co-partitioned. This restriction is not applicable in case of join with GlobalKTable, which is the most efficient here.
 
 ## Question 8 (2-11)
 To transform data from a Kafka topic to another one, I should use

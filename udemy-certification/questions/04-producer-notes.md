@@ -38,3 +38,14 @@
 - Q23 Producer - what must be supplied as bootstrap.server properties
 - Q24  Quiz, given replication factor 3  and min.insync.replicas 2 how many brokers can go down before producer with acks=1 can't produce?
 - Q25 What happens when messsage exceeds message limit - MessageSizeTooLarge is thrown which is not a retryable exception
+
+
+### Missed Questions
+ - 1 WIMM
+ - 6
+ - 8
+ - 16 WIMM
+ - 17
+ - 21 
+ - 22
+ - 24
