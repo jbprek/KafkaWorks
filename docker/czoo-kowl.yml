@@ -1,0 +1,51 @@
+version: "3.5"
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.3.0
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    container_name: zookeeper
+    hostname: zookeeper
+    ports:
+      - 2181:2181
+    networks:
+      - kafka-net
+
+  broker:
+    image: confluentinc/cp-kafka:7.3.0
+    depends_on:
+      - zookeeper
+    container_name: broker
+    hostname: broker
+    ports:
+      - '9092:9092'
+    networks:
+      - kafka-net
+    environment:
+      KAFKA_BROKER_ID: 0
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: INTERNAL_LISTENER://broker:29092,EXTERNAL_LISTENER://broker:9092
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL_LISTENER://broker:29092,EXTERNAL_LISTENER://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL_LISTENER:PLAINTEXT,EXTERNAL_LISTENER:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL_LISTENER
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 100
+
+  kowl:
+    image: "docker.redpanda.com/redpandadata/console:latest"
+    depends_on:
+      - broker
+    restart: always
+    container_name: kowl
+    hostname: kowl
+    networks:
+      - kafka-net
+    ports:
+      - '9090:8080'
+    environment:
+      KAFKA_BROKERS: 'broker:29092'
+
+networks:
+  kafka-net:    
