@@ -19,8 +19,12 @@
 
 ## Udemy course - Kafka - Master Avro, the Confluent Schema Registry and Kafka REST Proxy
 - [Course](https://www.udemy.com/course/confluent-schema-registry/)
+- [Exercices -  Customized](https://github.com/jbprek/ud-schema-rest-proxy-code)
+- [Example Schema Project - Customized]()
 
 ## Rest Proxy
 
 ## Udemy course - Kafka - Master Avro, the Confluent Schema Registry and Kafka REST Proxy
 - [Course](https://www.udemy.com/course/confluent-schema-registry/)
+- [Exercices -  Customized](https://github.com/jbprek/ud-schema-rest-proxy-code)
+- [Example Source Code](https://github.com/jbprek/ud-kafka-avro-course.git)
