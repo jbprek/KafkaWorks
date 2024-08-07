@@ -6,6 +6,22 @@
 ## Docker
 [My Kafka Docker](https://github.com/jbprek/KafkaDocker.git)
 
+## Kafka Producer Consumer
+
+### Udemy Course - Apache Kafka Series - Learn Apache Kafka for Beginners v2
+
+
+
+### Spring examples
+
+### Adapted examples from Udemy Course - Apache Kafka for Developers using Spring Boot
+
+- [Apache Kafka for Developers using Spring Boot](https://www.udemy.com/course/apache-kafka-for-developers-using-springboot/)
+
+- [Adapted Producer - Library events](TODO)
+- [Adapted Consumer - Library events](TODO)
+
+### Custom Projects
 
 ## Kafka Connector
 
@@ -21,6 +37,17 @@
 - [Course](https://www.udemy.com/course/confluent-schema-registry/)
 - [Exercices -  Customized](https://github.com/jbprek/ud-schema-rest-proxy-code)
 - [Example Source Code](https://github.com/jbprek/ud-kafka-avro-course)
+
+
+### Custom Projects 
+
+### Library events project adapted for AVRO
+- [AVRO Producer - Library events](TODO)
+- [AVRO Consumer - Library events](TODO)
+
+#### Adapted examples from https://www.udemy.com/course/confluent-schema-registry/
+
+1. Customer examples from schema course adapted for Sprinb Bii[sbk-ud-customer-schema](TODO)
 
 ## Rest Proxy
 
