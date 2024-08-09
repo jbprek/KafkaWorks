@@ -1,5 +1,5 @@
-#   Verified with issues
-#  Issue with KOWL and schema registry, kowl functionality disabled
+#   Verified
+# Zookeeper, 3 Brokers, Schema Registry, Kowl
 version: "3.5"
 services:
   zookeeper:
