@@ -18,9 +18,15 @@ See docker folder
 
 - [Apache Kafka for Developers using Spring Boot](https://www.udemy.com/course/apache-kafka-for-developers-using-springboot/)
 
-- [Adapted Producer - Library events](TODO)
-- [Adapted Consumer - Library events](TODO)
+- Features
+  - Producer
+  - Consumer
+  - Unit & Integration Tests
 
+
+- [Adapted Project - Library events](https://github.com/jbprek/sb-kafka-ud-library-events.git)
+- Branches
+  - original - Original project from course adapted for maven and with adapted docker 
 ### Custom Projects
 
 ## Kafka Connector
