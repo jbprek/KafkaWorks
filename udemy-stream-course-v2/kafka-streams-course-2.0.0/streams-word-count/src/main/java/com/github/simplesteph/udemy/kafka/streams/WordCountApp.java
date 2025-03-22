@@ -62,7 +62,7 @@ public class WordCountApp {
         while(true){
             streams.localThreadsMetadata().forEach(data -> System.out.println(data));
             try {
-                Thread.sleep(5000);
+                Thread.sleep(10000);
             } catch (InterruptedException e) {
                 break;
             }
